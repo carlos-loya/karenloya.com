@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Custom Colors - Olive Green Theme */
+  --color-olive-50: #F7F8F5;
+  --color-olive-100: #EDF0E8;
+  --color-olive-200: #DBE0CF;
+  --color-olive-300: #C1C9B3;
+  --color-olive-400: #A7B198;
+  --color-olive-500: #8D997D;
+  --color-olive-600: #7C8C5E;
+  --color-olive-700: #6B7F49;
+  --color-olive-800: #5B6840;
+  --color-olive-900: #4A5531;
+
+  /* Cream Colors */
+  --color-cream-50: #FAFAF8;
+  --color-cream-100: #F5F5F1;
+
+  /* Warm Gray Colors */
+  --color-warm-gray-50: #F9F9F8;
+  --color-warm-gray-100: #EFEFE8;
+  --color-warm-gray-200: #DFDFD0;
+  --color-warm-gray-300: #BFBFB2;
+  --color-warm-gray-400: #9F9F94;
+  --color-warm-gray-500: #7F7F76;
+  --color-warm-gray-600: #5F5F58;
+  --color-warm-gray-700: #3F3F3A;
+  --color-warm-gray-800: #2A2A26;
+  --color-warm-gray-900: #1A1A18;
+
+  /* Font Families */
+  --font-family-playfair: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-lora: var(--font-lora), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Box Shadows */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out;
+  --animate-slide-in-right: slide-in-right 0.5s ease-out;
+
+  /* Keyframes */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Base Styles */
+* {
+  border-color: var(--color-warm-gray-200);
+}
+
+body {
+  background-color: white;
+  color: var(--color-warm-gray-900);
+  font-family: var(--font-family-inter);
+}
+
+h1,
+h2 {
+  font-family: var(--font-family-playfair);
+}
+
+h3,
+h4 {
+  font-family: var(--font-family-lora);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--color-olive-700);
+  color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-olive-600);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-olive-700);
+}
+
+/* Utility Classes */
+.text-balance {
+  text-wrap: balance;
+}
