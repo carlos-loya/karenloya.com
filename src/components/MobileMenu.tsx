@@ -9,10 +9,9 @@ import { useEffect, useState, useRef } from 'react';
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  categories?: { _id: string; title: string }[];
 }
 
-export default function MobileMenu({ isOpen, onClose, categories = [] }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -41,19 +40,19 @@ export default function MobileMenu({ isOpen, onClose, categories = [] }: MobileM
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-cream-50 animate-fade-in md:hidden">
+    <div className="fixed inset-0 z-50 bg-olive-700 animate-fade-in md:hidden">
       <div className="flex flex-col h-full">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 h-16 border-b border-warm-gray-200">
-          <Link href="/" className="font-playfair text-2xl font-semibold text-olive-700">
-            KAREN
+        <div className="flex items-center justify-between px-6 h-16 border-b border-olive-600">
+          <Link href="/" className="font-playfair text-2xl font-semibold text-cream-50">
+            Karen Monique
           </Link>
           <button
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-olive-100 transition-colors"
+            className="p-2 rounded-full hover:bg-olive-600 transition-colors"
             aria-label="Close menu"
           >
-            <X size={24} className="text-warm-gray-900" />
+            <X size={24} className="text-cream-50" />
           </button>
         </div>
 
@@ -61,14 +60,14 @@ export default function MobileMenu({ isOpen, onClose, categories = [] }: MobileM
         <div className="px-6 pt-6">
           <form onSubmit={handleSearch} className="flex items-center gap-2">
             <div className="relative flex-1">
-              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-warm-gray-400" />
+              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-cream-50/50" />
               <input
                 ref={searchInputRef}
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search posts..."
-                className="w-full pl-9 pr-4 py-3 border border-warm-gray-300 rounded font-inter text-sm text-warm-gray-900 placeholder:text-warm-gray-400 focus:outline-none focus:border-olive-700"
+                className="w-full pl-9 pr-4 py-3 border border-olive-600 rounded bg-olive-800 font-inter text-sm text-cream-50 placeholder:text-cream-50/50 focus:outline-none focus:border-cream-50"
               />
             </div>
           </form>
@@ -81,30 +80,18 @@ export default function MobileMenu({ isOpen, onClose, categories = [] }: MobileM
               key={link.href}
               href={link.href}
               onClick={onClose}
-              className="text-2xl font-lora text-warm-gray-900 hover:text-olive-700 transition-colors"
+              className="text-2xl font-lora text-cream-50 hover:text-white transition-colors"
             >
               {link.label}
             </Link>
           ))}
-
-          {/* Category Links */}
-          {categories.length > 0 && (
-            <div className="flex flex-col items-center space-y-4 pt-4 border-t border-warm-gray-200">
-              <span className="font-inter text-xs uppercase tracking-wider text-warm-gray-500">
-                Categories
-              </span>
-              {categories.map((cat) => (
-                <Link
-                  key={cat._id}
-                  href={`/blog?category=${encodeURIComponent(cat.title)}`}
-                  onClick={onClose}
-                  className="text-lg font-lora text-warm-gray-700 hover:text-olive-700 transition-colors"
-                >
-                  {cat.title}
-                </Link>
-              ))}
-            </div>
-          )}
+          <Link
+            href="/about"
+            onClick={onClose}
+            className="text-2xl font-lora text-cream-50 hover:text-white transition-colors"
+          >
+            About Me
+          </Link>
         </nav>
 
         {/* Social Links */}
@@ -113,7 +100,7 @@ export default function MobileMenu({ isOpen, onClose, categories = [] }: MobileM
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-warm-gray-600 hover:text-olive-700 transition-colors"
+            className="text-cream-50/80 hover:text-white transition-colors"
             aria-label="Follow on Instagram"
           >
             <svg
