@@ -5,7 +5,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = 'Karen Monique',
+  title = 'Welcome to My Corner',
   subtitle = '',
   fullHeight = false
 }: HeroProps) {
