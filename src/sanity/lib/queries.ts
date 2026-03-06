@@ -71,3 +71,21 @@ export const allCategoriesQuery = defineQuery(`
     title
   }
 `)
+
+export const activeWeeklyDigestQuery = defineQuery(`
+  *[_type == "weeklyDigest" && active == true][0] {
+    _id,
+    title,
+    weekOf,
+    description,
+    "items": items[]->{
+      _id,
+      title,
+      "slug": slug.current,
+      excerpt,
+      coverImage,
+      date,
+      "categories": categories[]->title
+    }
+  }
+`)
