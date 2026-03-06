@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        title="About Karen"
+        title="About Me"
         subtitle="Lifestyle Journalist & Creative"
         fullHeight={false}
       />
