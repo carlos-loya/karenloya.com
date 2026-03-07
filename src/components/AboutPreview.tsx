@@ -8,7 +8,7 @@ export default function AboutPreview() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Image */}
-            <div className="relative aspect-[3/4] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-card">
+            <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden border-4 border-olive-700 shadow-card">
               <Image
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&h=675&fit=crop"
                 alt="About Karen"
@@ -20,13 +20,13 @@ export default function AboutPreview() {
             {/* Content */}
             <div className="space-y-6">
               <div>
-                <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-warm-gray-900 mb-4">
+                <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-olive-900 mb-4">
                   About Karen
                 </h2>
                 <div className="w-20 h-1 bg-olive-700"></div>
               </div>
 
-              <div className="font-inter text-warm-gray-700 space-y-4 text-base md:text-lg leading-relaxed">
+              <div className="font-inter text-olive-800 space-y-4 text-base md:text-lg leading-relaxed">
                 <p>
                   Welcome to my corner of the internet. I&apos;m Karen, a lifestyle journalist, creative spirit,
                   and firm believer in the art of slow living. Through this journal, I explore the beauty

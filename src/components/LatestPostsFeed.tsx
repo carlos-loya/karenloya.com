@@ -12,7 +12,7 @@ export default function LatestPostsFeed({ posts, limit }: LatestPostsFeedProps) 
 
   return (
     <div>
-      <h2 className="font-playfair text-3xl md:text-4xl font-normal text-warm-gray-900 mb-8">
+      <h2 className="font-playfair text-3xl md:text-4xl font-normal text-olive-900 mb-8">
         The Latest
       </h2>
       <div className="space-y-8">

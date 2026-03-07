@@ -8,7 +8,7 @@ interface WeeklyDigestProps {
 export default function WeeklyDigest({ digest }: WeeklyDigestProps) {
   return (
     <div className="mb-8">
-      <h2 className="font-playfair text-2xl md:text-3xl font-normal text-warm-gray-900 mb-4">
+      <h2 className="font-playfair text-2xl md:text-3xl font-normal text-olive-900 mb-4">
         Weekly Digest
       </h2>
       {digest ? (
@@ -17,7 +17,7 @@ export default function WeeklyDigest({ digest }: WeeklyDigestProps) {
             {digest.title}
           </h3>
           {digest.description && (
-            <p className="font-inter text-warm-gray-600 text-sm mb-4 leading-relaxed">
+            <p className="font-inter text-olive-800 text-sm mb-4 leading-relaxed">
               {digest.description}
             </p>
           )}
@@ -29,7 +29,7 @@ export default function WeeklyDigest({ digest }: WeeklyDigestProps) {
                   className="group flex items-start gap-3"
                 >
                   <span className="text-olive-700 mt-1 shrink-0">&bull;</span>
-                  <span className="font-inter text-sm text-warm-gray-700 group-hover:text-olive-700 transition-colors leading-snug">
+                  <span className="font-inter text-sm text-olive-800 group-hover:text-olive-600 transition-colors leading-snug">
                     {post.title}
                   </span>
                 </Link>
@@ -38,7 +38,7 @@ export default function WeeklyDigest({ digest }: WeeklyDigestProps) {
           </ul>
         </div>
       ) : (
-        <p className="font-inter text-warm-gray-500 text-sm italic">
+        <p className="font-inter text-olive-600 text-sm italic">
           Check back soon for this week&apos;s picks!
         </p>
       )}

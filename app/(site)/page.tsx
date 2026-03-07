@@ -2,7 +2,6 @@ import Hero from '@/components/Hero';
 import LatestPostsFeed from '@/components/LatestPostsFeed';
 import WelcomeSection from '@/components/WelcomeSection';
 import WeeklyDigest from '@/components/WeeklyDigest';
-import SidebarFooter from '@/components/SidebarFooter';
 import { getAllPosts, getActiveWeeklyDigest } from '@/sanity/lib/fetchers';
 
 export const revalidate = 60;
@@ -35,7 +34,6 @@ export default async function HomePage() {
               <div className="md:sticky md:top-28 max-h-[calc(100vh-7rem)] overflow-y-auto">
                 <WelcomeSection />
                 <WeeklyDigest digest={digest} />
-                <SidebarFooter />
               </div>
             </aside>
           </div>

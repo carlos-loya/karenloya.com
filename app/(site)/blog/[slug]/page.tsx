@@ -51,7 +51,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="container mx-auto px-6 py-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-warm-gray-600 hover:text-olive-700 transition-colors font-inter text-sm"
+            className="inline-flex items-center gap-2 text-olive-700 hover:text-olive-600 transition-colors font-inter text-sm"
           >
             <ChevronLeft size={20} />
             Back to Blog
@@ -60,7 +60,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Featured Image */}
         <div className="container mx-auto px-6 mb-12">
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-card">
+          <div className="relative aspect-[16/9] overflow-hidden border-4 border-olive-700 shadow-card">
             <Image
               src={urlFor(post.coverImage).width(1280).height(720).url()}
               alt={post.title}
@@ -88,12 +88,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-warm-gray-900 mb-6">
+            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-olive-900 mb-6">
               {post.title}
             </h1>
 
             {/* Metadata */}
-            <div className="flex items-center gap-4 text-warm-gray-600 font-inter text-sm mb-6">
+            <div className="flex items-center gap-4 text-olive-700 font-inter text-sm mb-6">
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString('en-US', {
                   year: 'numeric',
@@ -104,7 +104,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
 
             {/* Excerpt */}
-            <p className="font-inter text-lg md:text-xl text-warm-gray-700 leading-relaxed italic border-l-4 border-olive-700 pl-6">
+            <p className="font-inter text-lg md:text-xl text-olive-800 leading-relaxed italic border-l-4 border-olive-700 pl-6">
               {post.excerpt}
             </p>
           </div>
@@ -117,10 +117,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Share Section */}
             <div className="mt-12 p-8 bg-olive-100 rounded-2xl text-center">
-              <h3 className="font-playfair text-2xl font-bold text-warm-gray-900 mb-4">
+              <h3 className="font-playfair text-2xl font-bold text-olive-900 mb-4">
                 Enjoyed this post?
               </h3>
-              <p className="font-inter text-warm-gray-700 mb-6">
+              <p className="font-inter text-olive-800 mb-6">
                 Share it with friends or explore more stories on the blog.
               </p>
               <Link
