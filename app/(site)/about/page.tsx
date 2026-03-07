@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        title="About Karen"
+        title="About Me"
         subtitle="Lifestyle Journalist & Creative"
         fullHeight={false}
       />
@@ -13,72 +13,88 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-cream-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            {/* Profile Image */}
-            <div className="mb-12">
-              <div className="relative aspect-[3/2] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-card">
-                <Image
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&h=675&fit=crop"
-                  alt="Karen - Lifestyle Journalist"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+            {/* Photo 1 - Left aligned */}
+            <div className="mb-12 md:flex md:gap-12 md:items-start">
+              <div className="md:w-1/2 mb-8 md:mb-0">
+                <div className="border-4 border-olive-700 shadow-card">
+                  <Image
+                    src="/images/about-me-1.jpeg"
+                    alt="Karen - Lifestyle Journalist"
+                    width={600}
+                    height={600}
+                    className="w-full h-auto"
+                    priority
+                  />
+                </div>
               </div>
-            </div>
-
-            {/* Bio Content */}
-            <div className="prose prose-lg max-w-none">
-              <div className="font-inter text-warm-gray-700 space-y-6 text-base md:text-lg leading-relaxed">
+              <div className="md:w-1/2 font-inter text-olive-800 space-y-6 text-base md:text-lg leading-relaxed">
                 <p>
                   Welcome to my corner of the internet. I&apos;m Karen, a lifestyle journalist, creative spirit,
                   and firm believer in the art of slow living. Through this journal, I explore the beauty
                   in everyday moments—from the perfect cup of morning coffee to the golden hour light that
                   transforms an ordinary room into something magical.
                 </p>
-
                 <p>
                   My journey into lifestyle writing began with a simple realization: life is made up of
                   small, intentional choices. The clothes we wear, the spaces we inhabit, the rituals we
                   cultivate—each one tells a story about who we are and how we want to experience the world.
                 </p>
+              </div>
+            </div>
 
+            {/* Photo 2 - Right aligned */}
+            <div className="mb-12 md:flex md:flex-row-reverse md:gap-12 md:items-start">
+              <div className="md:w-1/2 mb-8 md:mb-0">
+                <div className="border-4 border-olive-700 shadow-card">
+                  <Image
+                    src="/images/about-me-2.jpeg"
+                    alt="Karen"
+                    width={600}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2 font-inter text-olive-800 space-y-6 text-base md:text-lg leading-relaxed">
                 <p>
                   Here, you&apos;ll find reflections on fashion that prioritizes quality over quantity, home
                   spaces that nurture the soul, beauty routines that honor both self-care and sustainability,
                   and travel experiences that open our eyes to new perspectives. My approach is simple:
                   embrace authenticity, celebrate craftsmanship, and always leave room for wonder.
                 </p>
-
                 <p>
                   When I&apos;m not writing, you&apos;ll find me exploring local farmers markets, curled up in my
                   reading nook with a cup of tea, or planning my next adventure to wine country. I believe
                   in the power of community, the importance of supporting local artisans, and the joy that
                   comes from sharing stories over a thoughtfully prepared meal.
                 </p>
-
-                <p>
-                  This journal is an invitation—to slow down, to notice, to appreciate the beauty that
-                  surrounds us. Whether you&apos;re here for style inspiration, wellness insights, or simply
-                  a moment of calm in your busy day, I&apos;m grateful you&apos;ve stopped by.
-                </p>
-
-                <p className="text-xl font-lora text-olive-700 italic mt-8">
-                  Thank you for being here, and for joining me on this journey toward a more intentional,
-                  beautiful life.
-                </p>
-
-                <p className="text-2xl font-playfair text-warm-gray-900 mt-6">
-                  — Karen
-                </p>
               </div>
+            </div>
+
+            {/* Closing text */}
+            <div className="font-inter text-olive-800 space-y-6 text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-center">
+              <p>
+                This journal is an invitation—to slow down, to notice, to appreciate the beauty that
+                surrounds us. Whether you&apos;re here for style inspiration, wellness insights, or simply
+                a moment of calm in your busy day, I&apos;m grateful you&apos;ve stopped by.
+              </p>
+
+              <p className="text-xl font-lora text-olive-700 italic mt-8">
+                Thank you for being here, and for joining me on this journey toward a more intentional,
+                beautiful life.
+              </p>
+
+              <p className="text-2xl font-playfair text-olive-900 mt-6">
+                — Karen
+              </p>
             </div>
 
             {/* Connect Section */}
             <div className="mt-16 p-8 bg-olive-100 rounded-2xl text-center">
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-warm-gray-900 mb-4">
+              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-olive-900 mb-4">
                 Let&apos;s Connect
               </h2>
-              <p className="font-inter text-warm-gray-700 mb-6">
+              <p className="font-inter text-olive-800 mb-6">
                 Follow along on Instagram for daily inspiration, behind-the-scenes moments, and glimpses into my creative process.
               </p>
               <a

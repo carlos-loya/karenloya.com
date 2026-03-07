@@ -10,7 +10,7 @@ interface BlogPostCardProps {
 export default function BlogPostCard({ post }: BlogPostCardProps) {
   return (
     <Link href={`/blog/${post.slug}`} className="block group">
-      <article className="bg-white overflow-hidden border border-warm-gray-200 transition-all duration-300 hover:shadow-lg">
+      <article className="bg-white overflow-hidden border-4 border-olive-700 transition-all duration-300 hover:shadow-lg">
         {/* Featured Image */}
         <div className="relative aspect-[3/4] overflow-hidden">
           <Image
@@ -25,17 +25,17 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
         {/* Content */}
         <div className="p-8">
           {/* Title */}
-          <h3 className="font-playfair text-2xl md:text-[28px] font-normal text-warm-gray-900 mb-4 line-clamp-3 group-hover:text-olive-700 transition-colors leading-tight">
+          <h3 className="font-playfair text-2xl md:text-[28px] font-normal text-olive-900 mb-4 line-clamp-3 group-hover:text-olive-600 transition-colors leading-tight">
             {post.title}
           </h3>
 
           {/* Excerpt */}
-          <p className="font-inter text-[15px] text-warm-gray-600 line-clamp-3 mb-4 leading-relaxed">
+          <p className="font-inter text-[15px] text-olive-800 line-clamp-3 mb-4 leading-relaxed">
             {post.excerpt}
           </p>
 
           {/* Metadata */}
-          <div className="flex items-center text-xs text-warm-gray-500 uppercase tracking-wider">
+          <div className="flex items-center text-xs text-olive-700 uppercase tracking-wider">
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString('en-US', {
                 month: 'short',

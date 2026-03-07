@@ -11,3 +11,11 @@ export interface SanityBlogPost {
   categories: string[]
   content?: PortableTextBlock[]
 }
+
+export interface SanityWeeklyDigest {
+  _id: string
+  title: string
+  weekOf: string
+  description?: string
+  items: SanityBlogPost[]
+}

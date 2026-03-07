@@ -60,7 +60,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           {/* Empty State */}
           {posts.length === 0 && (
             <div className="text-center py-16">
-              <p className="font-lora text-xl text-warm-gray-600">
+              <p className="font-lora text-xl text-olive-800">
                 {search
                   ? `No posts found for "${search}". Try a different search term.`
                   : category
