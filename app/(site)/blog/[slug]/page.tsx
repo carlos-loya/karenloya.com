@@ -60,15 +60,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Featured Image */}
         <div className="container mx-auto px-6 mb-12">
-          <div className="relative aspect-[16/9] overflow-hidden border-4 border-olive-700 shadow-card">
-            <Image
-              src={urlFor(post.coverImage).width(1280).height(720).url()}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
+          <div className="max-w-3xl mx-auto">
+            <div className="relative aspect-[16/9] overflow-hidden border-4 border-olive-700 shadow-card">
+              <Image
+                src={urlFor(post.coverImage).width(768).height(432).url()}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
           </div>
         </div>
 

@@ -23,14 +23,14 @@ export default async function HomePage() {
             <WeeklyDigest digest={digest} />
           </div>
 
-          <div className="flex flex-col md:flex-row gap-12 md:gap-16">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-12">
             {/* Left column: post feed */}
-            <div className="md:w-7/12">
+            <div className="md:w-2/3">
               <LatestPostsFeed posts={posts} />
             </div>
 
             {/* Right column: sticky sidebar (desktop only) */}
-            <aside className="hidden md:block md:w-5/12">
+            <aside className="hidden md:block md:w-1/3">
               <div className="md:sticky md:top-28 max-h-[calc(100vh-7rem)] overflow-y-auto">
                 <WelcomeSection />
                 <WeeklyDigest digest={digest} />
