@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-olive-700 py-12 md:py-16">
+    <footer className="bg-olive-900 py-12 md:py-16">
       <div className="container mx-auto px-6 md:px-8 max-w-7xl">
         <div className="flex items-center justify-between gap-6 mb-10">
           {/* Left: About Me & Contact */}
