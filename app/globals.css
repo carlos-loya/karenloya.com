@@ -34,6 +34,7 @@
   --font-family-playfair: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-family-lora: var(--font-lora), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-family-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-great-vibes: var(--font-great-vibes), cursive;
 
   /* Box Shadows */
   --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);

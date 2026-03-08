@@ -44,7 +44,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       <div className="flex flex-col h-full">
         {/* Header */}
         <div className="flex items-center justify-between px-6 h-16 border-b border-olive-600">
-          <Link href="/" className="font-playfair text-2xl font-semibold text-cream-50">
+          <Link href="/" className="text-3xl text-cream-50" style={{ fontFamily: 'var(--font-family-great-vibes)' }}>
             Karen Monique
           </Link>
           <button

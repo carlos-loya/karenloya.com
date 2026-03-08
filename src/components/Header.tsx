@@ -34,7 +34,7 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 z-40 bg-olive-900">
         <div className="container mx-auto px-6 md:px-8 h-20 md:h-24 flex items-center justify-between gap-10 lg:gap-12">
           {/* Logo */}
-          <Link href="/" className="font-playfair text-3xl md:text-[40px] font-normal text-cream-50 tracking-wide hover:text-white transition-colors">
+          <Link href="/" className="text-4xl md:text-5xl text-cream-50 hover:text-white transition-colors" style={{ fontFamily: 'var(--font-family-great-vibes)' }}>
             Karen Monique
           </Link>
 
