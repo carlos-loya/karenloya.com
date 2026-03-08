@@ -26,7 +26,7 @@ export default function Footer() {
           </nav>
 
           {/* Center: Wildflower Icon */}
-          <WildflowerIcon className="text-cream-50/80" width={80} height={80} />
+          <WildflowerIcon className="text-cream-50/80" width={120} height={120} />
 
           {/* Right: Return to Top & Instagram */}
           <div className="flex items-center gap-6">
