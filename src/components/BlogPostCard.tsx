@@ -12,9 +12,9 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     <Link href={`/blog/${post.slug}`} className="block group">
       <article className="bg-white overflow-hidden border-4 border-olive-700 transition-all duration-300 hover:shadow-lg">
         {/* Featured Image */}
-        <div className="relative aspect-[3/4] overflow-hidden">
+        <div className="relative aspect-[16/9] overflow-hidden">
           <Image
-            src={urlFor(post.coverImage).width(600).height(800).url()}
+            src={urlFor(post.coverImage).width(600).height(338).url()}
             alt={post.title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-700"

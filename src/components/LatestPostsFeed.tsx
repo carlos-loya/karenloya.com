@@ -15,7 +15,7 @@ export default function LatestPostsFeed({ posts, limit }: LatestPostsFeedProps) 
       <h2 className="font-playfair text-3xl md:text-4xl font-normal text-olive-900 mb-8">
         The Latest
       </h2>
-      <div className="space-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {displayPosts.map((post) => (
           <BlogPostCard key={post._id} post={post} />
         ))}

@@ -31,30 +31,24 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 bg-olive-700">
+      <header className="fixed top-0 left-0 right-0 z-40 bg-olive-900">
         <div className="container mx-auto px-6 md:px-8 h-20 md:h-24 flex items-center justify-between gap-10 lg:gap-12">
           {/* Logo */}
-          <Link href="/" className="font-playfair text-3xl md:text-[40px] font-normal text-cream-50 tracking-wide hover:text-white transition-colors">
+          <Link href="/" className="text-4xl md:text-5xl text-cream-50 hover:text-white transition-colors" style={{ fontFamily: 'var(--font-family-great-vibes)' }}>
             Karen Monique
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-stretch h-full -my-0">
+          <nav className="hidden md:flex items-center justify-center flex-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-cream-50/80 hover:text-white hover:bg-olive-800 transition-all font-inter text-sm uppercase tracking-wider px-6 border-l border-olive-600 flex items-center"
+                className="text-cream-50/80 hover:text-white transition-all font-inter text-sm uppercase tracking-wider px-4 lg:px-5 flex items-center whitespace-nowrap"
               >
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/about"
-              className="text-cream-50/80 hover:text-white hover:bg-olive-800 transition-all font-inter text-sm uppercase tracking-wider px-6 border-x border-olive-600 flex items-center"
-            >
-              About Me
-            </Link>
           </nav>
 
           {/* Desktop Right Section: Search + Instagram */}

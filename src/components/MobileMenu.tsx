@@ -40,11 +40,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-olive-700 animate-fade-in md:hidden">
+    <div className="fixed inset-0 z-50 bg-olive-900 animate-fade-in md:hidden">
       <div className="flex flex-col h-full">
         {/* Header */}
         <div className="flex items-center justify-between px-6 h-16 border-b border-olive-600">
-          <Link href="/" className="font-playfair text-2xl font-semibold text-cream-50">
+          <Link href="/" className="text-3xl text-cream-50" style={{ fontFamily: 'var(--font-family-great-vibes)' }}>
             Karen Monique
           </Link>
           <button
@@ -85,13 +85,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/about"
-            onClick={onClose}
-            className="text-2xl font-lora text-cream-50 hover:text-white transition-colors"
-          >
-            About Me
-          </Link>
         </nav>
 
         {/* Social Links */}
