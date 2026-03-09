@@ -13,6 +13,7 @@ export default defineConfig({
   title: 'KAREN - A Lifestyle Journal',
   projectId,
   dataset,
+  basePath: '/studio',
   plugins: [structureTool(), visionTool()],
   schema: {
     types: schemaTypes,
