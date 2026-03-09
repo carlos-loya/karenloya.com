@@ -1,6 +1,9 @@
 import imageUrlBuilder from '@sanity/image-url'
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { client } from './client'
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type SanityImageSource = Parameters<ReturnType<typeof imageUrlBuilder>['image']>[0]
+export type { SanityImageSource }
 
 const builder = imageUrlBuilder(client)
 
