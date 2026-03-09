@@ -1,16 +1,17 @@
 import Hero from '@/components/Hero';
 import LatestPostsFeed from '@/components/LatestPostsFeed';
 import WelcomeSection from '@/components/WelcomeSection';
-import WeeklyDigest from '@/components/WeeklyDigest';
-import { getAllPosts, getActiveWeeklyDigest } from '@/sanity/lib/fetchers';
+import SinceLastTime from '@/components/SinceLastTime';
+import { getAllPosts, getAllSinceLastTime } from '@/sanity/lib/fetchers';
 
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const [posts, digest] = await Promise.all([
+  const [posts, sinceLastTimePosts] = await Promise.all([
     getAllPosts(),
-    getActiveWeeklyDigest(),
+    getAllSinceLastTime(),
   ]);
+  const latestSinceLastTime = sinceLastTimePosts[0] ?? null;
 
   return (
     <>
@@ -20,7 +21,7 @@ export default async function HomePage() {
           {/* Mobile: sidebar content above posts */}
           <div className="md:hidden mb-12 space-y-8">
             <WelcomeSection />
-            <WeeklyDigest digest={digest} />
+            <SinceLastTime latest={latestSinceLastTime} />
           </div>
 
           <div className="flex flex-col md:flex-row gap-10 md:gap-12">
@@ -33,7 +34,7 @@ export default async function HomePage() {
             <aside className="hidden md:block md:w-1/3">
               <div className="md:sticky md:top-28 max-h-[calc(100vh-7rem)] overflow-y-auto">
                 <WelcomeSection />
-                <WeeklyDigest digest={digest} />
+                <SinceLastTime latest={latestSinceLastTime} />
               </div>
             </aside>
           </div>

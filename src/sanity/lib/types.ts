@@ -1,5 +1,5 @@
 import type { PortableTextBlock } from '@portabletext/react'
-import type { SanityImageSource } from '@sanity/image-url'
+import type { SanityImageSource } from './image'
 
 export interface SanityBlogPost {
   _id: string
@@ -12,10 +12,12 @@ export interface SanityBlogPost {
   content?: PortableTextBlock[]
 }
 
-export interface SanityWeeklyDigest {
+export interface SanitySinceLastTime {
   _id: string
   title: string
-  weekOf: string
-  description?: string
-  items: SanityBlogPost[]
+  slug: string
+  excerpt: string
+  coverImage?: SanityImageSource
+  date: string
+  content?: PortableTextBlock[]
 }

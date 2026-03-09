@@ -19,6 +19,33 @@ const components: PortableTextComponents = {
         </div>
       )
     },
+    photoGallery: ({ value }) => {
+      if (!value?.images?.length) return null
+      return (
+        <figure className="my-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {value.images.map((img: { asset?: { _ref?: string }; alt?: string }, i: number) => {
+              if (!img?.asset) return null
+              return (
+                <Image
+                  key={i}
+                  src={urlFor(img).width(600).url()}
+                  alt={img.alt || ''}
+                  width={600}
+                  height={600}
+                  className="rounded-lg object-cover aspect-square"
+                />
+              )
+            })}
+          </div>
+          {value.caption && (
+            <figcaption className="mt-3 text-center font-inter text-sm text-olive-600 italic">
+              {value.caption}
+            </figcaption>
+          )}
+        </figure>
+      )
+    },
   },
   marks: {
     link: ({ children, value }) => {
