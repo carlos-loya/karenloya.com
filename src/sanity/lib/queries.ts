@@ -72,20 +72,29 @@ export const allCategoriesQuery = defineQuery(`
   }
 `)
 
-export const activeWeeklyDigestQuery = defineQuery(`
-  *[_type == "weeklyDigest" && active == true][0] {
+export const allSinceLastTimeQuery = defineQuery(`
+  *[_type == "sinceLastTime" && date <= now()] | order(date desc) {
     _id,
     title,
-    weekOf,
-    description,
-    "items": items[]->{
-      _id,
-      title,
-      "slug": slug.current,
-      excerpt,
-      coverImage,
-      date,
-      "categories": categories[]->title
-    }
+    "slug": slug.current,
+    excerpt,
+    coverImage,
+    date
   }
+`)
+
+export const sinceLastTimeBySlugQuery = defineQuery(`
+  *[_type == "sinceLastTime" && slug.current == $slug && date <= now()][0] {
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    coverImage,
+    date,
+    content
+  }
+`)
+
+export const sinceLastTimeSlugsQuery = defineQuery(`
+  *[_type == "sinceLastTime" && date <= now()] { "slug": slug.current }
 `)
