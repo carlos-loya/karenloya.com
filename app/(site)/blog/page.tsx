@@ -21,9 +21,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     pageTitle = `Search: "${search}"`;
     pageSubtitle = `${posts.length} result${posts.length !== 1 ? 's' : ''} found`;
   } else if (category) {
-    posts = await getPostsByCategory(category);
-    pageTitle = category;
-    pageSubtitle = `${posts.length} post${posts.length !== 1 ? 's' : ''} in ${category}`;
+    const result = await getPostsByCategory(category);
+    posts = result.posts;
+    const displayTitle = result.title ?? category;
+    pageTitle = displayTitle;
+    pageSubtitle = `${posts.length} post${posts.length !== 1 ? 's' : ''} in ${displayTitle}`;
   } else {
     posts = await getAllPosts();
   }

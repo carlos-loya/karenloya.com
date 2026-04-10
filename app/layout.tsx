@@ -29,8 +29,25 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: siteMetadata.title,
+  metadataBase: new URL('https://karenloya.com'),
+  title: {
+    default: siteMetadata.title,
+    template: `%s | ${siteMetadata.title}`,
+  },
   description: siteMetadata.description,
+  openGraph: {
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    url: 'https://karenloya.com',
+    siteName: siteMetadata.title,
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+  },
 };
 
 export default function RootLayout({

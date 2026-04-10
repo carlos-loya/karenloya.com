@@ -90,7 +90,7 @@ export default function AboutPage() {
             </div>
 
             {/* Connect Section */}
-            <div className="mt-16 p-8 bg-olive-100 rounded-2xl text-center">
+            <div id="connect" className="mt-16 p-8 bg-olive-100 rounded-2xl text-center scroll-mt-24">
               <h2 className="font-playfair text-2xl md:text-3xl font-bold text-olive-900 mb-4">
                 Let&apos;s Connect
               </h2>

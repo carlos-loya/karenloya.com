@@ -29,8 +29,10 @@ export async function getRecentPosts(limit: number = 6): Promise<SanityBlogPost[
   return client.fetch(recentPostsQuery, { limit })
 }
 
-export async function getPostsByCategory(category: string): Promise<SanityBlogPost[]> {
-  return client.fetch(postsByCategoryQuery, { category })
+export async function getPostsByCategory(
+  slug: string
+): Promise<{ title: string | null; posts: SanityBlogPost[] }> {
+  return client.fetch(postsByCategoryQuery, { slug })
 }
 
 export async function searchPosts(query: string): Promise<SanityBlogPost[]> {

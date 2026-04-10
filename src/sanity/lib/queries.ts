@@ -42,14 +42,17 @@ export const recentPostsQuery = defineQuery(`
 `)
 
 export const postsByCategoryQuery = defineQuery(`
-  *[_type == "blogPost" && date <= now() && $category in categories[]->title] | order(date desc) {
-    _id,
-    title,
-    "slug": slug.current,
-    excerpt,
-    coverImage,
-    date,
-    "categories": categories[]->title
+  {
+    "title": *[_type == "category" && slug.current == $slug][0].title,
+    "posts": *[_type == "blogPost" && date <= now() && $slug in categories[]->slug.current] | order(date desc) {
+      _id,
+      title,
+      "slug": slug.current,
+      excerpt,
+      coverImage,
+      date,
+      "categories": categories[]->title
+    }
   }
 `)
 
