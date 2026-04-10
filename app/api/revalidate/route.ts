@@ -9,9 +9,7 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    revalidatePath('/');
-    revalidatePath('/blog');
-    revalidatePath('/blog/[slug]', 'page');
+    revalidatePath('/', 'layout');
 
     return NextResponse.json({ revalidated: true, now: Date.now() });
   } catch (error) {
