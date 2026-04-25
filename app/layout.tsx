@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Lora, Inter, Great_Vibes } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import { siteMetadata } from '@/data/constants';
 
@@ -59,6 +60,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${lora.variable} ${inter.variable} ${greatVibes.variable}`}>
       <body className="antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
